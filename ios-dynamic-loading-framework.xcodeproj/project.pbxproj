@@ -76,10 +76,10 @@
 		5F4B9B5F1CEC80AE0096D67C /* ios-dynamic-loading-frameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-dynamic-loading-frameworkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4B9B631CEC80AE0096D67C /* ios_dynamic_loading_frameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_dynamic_loading_frameworkTests.m; sourceTree = "<group>"; };
 		5F4B9B651CEC80AE0096D67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F4B9B701CEC80EF0096D67C /* CASHello.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CASHello.h; path = "dynamic-framework-1/CASHello.h"; sourceTree = "<group>"; };
-		5F4B9B711CEC80EF0096D67C /* CASHello.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CASHello.m; path = "dynamic-framework-1/CASHello.m"; sourceTree = "<group>"; };
-		5F4B9B721CEC81090096D67C /* CASHello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CASHello.h; path = "dynamic-framework-2/CASHello.h"; sourceTree = "<group>"; };
-		5F4B9B731CEC81090096D67C /* CASHello.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CASHello.m; path = "dynamic-framework-2/CASHello.m"; sourceTree = "<group>"; };
+		5F4B9B701CEC80EF0096D67C /* CASHello.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CASHello.h; path = DynamicFramework1/CASHello.h; sourceTree = "<group>"; };
+		5F4B9B711CEC80EF0096D67C /* CASHello.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CASHello.m; path = DynamicFramework1/CASHello.m; sourceTree = "<group>"; };
+		5F4B9B721CEC81090096D67C /* CASHello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CASHello.h; path = DynamicFramework2/CASHello.h; sourceTree = "<group>"; };
+		5F4B9B731CEC81090096D67C /* CASHello.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CASHello.m; path = DynamicFramework2/CASHello.m; sourceTree = "<group>"; };
 		5F4B9BBE1CEC86CC0096D67C /* DynamicFramework1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicFramework1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4B9BC01CEC86CC0096D67C /* DynamicFramework1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicFramework1.h; sourceTree = "<group>"; };
 		5F4B9BC21CEC86CC0096D67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		5F4B9B481CEC80AE0096D67C /* ios-dynamic-loading-framework */ = {
 			isa = PBXGroup;
 			children = (
-				5F4B9B6E1CEC80BF0096D67C /* dynamic-framework-1 */,
-				5F4B9B6F1CEC80CC0096D67C /* dynamic-framework-2 */,
+				5F4B9B6E1CEC80BF0096D67C /* DynamicFramework1 */,
+				5F4B9B6F1CEC80CC0096D67C /* DynamicFramework2 */,
 				5F4B9B4C1CEC80AE0096D67C /* AppDelegate.h */,
 				5F4B9B4D1CEC80AE0096D67C /* AppDelegate.m */,
 				5F4B9B4F1CEC80AE0096D67C /* ViewController.h */,
@@ -177,22 +177,22 @@
 			path = "ios-dynamic-loading-frameworkTests";
 			sourceTree = "<group>";
 		};
-		5F4B9B6E1CEC80BF0096D67C /* dynamic-framework-1 */ = {
+		5F4B9B6E1CEC80BF0096D67C /* DynamicFramework1 */ = {
 			isa = PBXGroup;
 			children = (
 				5F4B9B701CEC80EF0096D67C /* CASHello.h */,
 				5F4B9B711CEC80EF0096D67C /* CASHello.m */,
 			);
-			name = "dynamic-framework-1";
+			name = DynamicFramework1;
 			sourceTree = "<group>";
 		};
-		5F4B9B6F1CEC80CC0096D67C /* dynamic-framework-2 */ = {
+		5F4B9B6F1CEC80CC0096D67C /* DynamicFramework2 */ = {
 			isa = PBXGroup;
 			children = (
 				5F4B9B721CEC81090096D67C /* CASHello.h */,
 				5F4B9B731CEC81090096D67C /* CASHello.m */,
 			);
-			name = "dynamic-framework-2";
+			name = DynamicFramework2;
 			sourceTree = "<group>";
 		};
 		5F4B9BBF1CEC86CC0096D67C /* DynamicFramework1 */ = {
@@ -690,6 +690,7 @@
 				5F4B9B6A1CEC80AE0096D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F4B9B6B1CEC80AE0096D67C /* Build configuration list for PBXNativeTarget "ios-dynamic-loading-frameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -698,6 +699,7 @@
 				5F4B9B6D1CEC80AE0096D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F4B9BC71CEC86CD0096D67C /* Build configuration list for PBXNativeTarget "DynamicFramework1" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +708,7 @@
 				5F4B9BC91CEC86CD0096D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F4B9BDE1CEC88A60096D67C /* Build configuration list for PBXNativeTarget "DynamicFramework2" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +717,7 @@
 				5F4B9BE01CEC88A60096D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

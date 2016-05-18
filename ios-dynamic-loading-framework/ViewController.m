@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     //Loading the first dynamic library here works fine :)
-    NSLog(@"Before referencing CASHello in dynamic-framework-1");
+    NSLog(@"Before referencing CASHello in DynamicFramework1");
     [self loadCASHelloFromDynamicFramework1];
     
     /*
@@ -28,7 +28,7 @@
      
      objc[5074]: Class CASHello is implemented in both /private/var/containers/Bundle/Application/1688AD11-CA2A-44F5-9E98-AC1C7495B569/ios-dynamic-loading-framework.app/Frameworks/DynamicFramework1.framework/DynamicFramework1 and /private/var/containers/Bundle/Application/1688AD11-CA2A-44F5-9E98-AC1C7495B569/ios-dynamic-loading-framework.app/Frameworks/DynamicFramework2.framework/DynamicFramework2. One of the two will be used. Which one is undefined.
     */
-    NSLog(@"Before referencing CASHello in dynamic-framework-2");
+    NSLog(@"Before referencing CASHello in DynamicFramework2");
     [self loadCASHelloFromDynamicFramework2];
 }
 
@@ -38,22 +38,22 @@
     
     if (NSClassFromString(@"CASHello"))
     {
-        NSLog(@"Loaded CASHello in dynamic-framework-1");
+        NSLog(@"Loaded CASHello in DynamicFramework1");
     }
     else
     {
-        NSLog(@"Could not load CASHello in dynamic-framework-1");
+        NSLog(@"Could not load CASHello in DynamicFramework1");
     }
     
     dlclose(framework1Handle);
     
     if (NSClassFromString(@"CASHello"))
     {
-        NSLog(@"CASHello from dynamic-framework-1 still loaded after dlclose()");
+        NSLog(@"CASHello from DynamicFramework1 still loaded after dlclose()");
     }
     else
     {
-        NSLog(@"Unloaded dynamic-framework-1");
+        NSLog(@"Unloaded DynamicFramework1");
     }
 }
 
@@ -63,22 +63,22 @@
     
     if (NSClassFromString(@"CASHello"))
     {
-        NSLog(@"Loaded CASHello in dynamic-framework-2");
+        NSLog(@"Loaded CASHello in DynamicFramework2");
     }
     else
     {
-        NSLog(@"Could not load CASHello in dynamic-framework-2");
+        NSLog(@"Could not load CASHello in DynamicFramework2");
     }
     
     dlclose(framework1Handle);
     
     if (NSClassFromString(@"CASHello"))
     {
-        NSLog(@"CASHello from dynamic-framework-2 still loaded after dlclose()");
+        NSLog(@"CASHello from DynamicFramework2 still loaded after dlclose()");
     }
     else
     {
-        NSLog(@"Unloaded dynamic-framework-2");
+        NSLog(@"Unloaded DynamicFramework2");
     }
 }
 
